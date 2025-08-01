@@ -8,7 +8,7 @@ export default function ProductList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/products')
+    axios.get('https://mern-ecommerce-1oz8.onrender.com/api/products')
       .then(res => setProducts(res.data))
       .catch(() => setProducts([]))
       .finally(() => setLoading(false));

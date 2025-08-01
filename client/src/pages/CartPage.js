@@ -15,7 +15,7 @@ export default function CartPage() {
       navigate('/login');
       return;
     }
-    axios.get('http://localhost:5000/api/cart', {
+    axios.get('https://mern-ecommerce-1oz8.onrender.com/api/cart', {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setCart(res.data))
@@ -25,7 +25,7 @@ export default function CartPage() {
 
   const handleRemove = async (productId) => {
     try {
-      await axios.post('http://localhost:5000/api/cart/remove', { productId }, {
+      await axios.post('https://mern-ecommerce-1oz8.onrender.com/api/cart/remove', { productId }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCart(cart.filter(item => item.product._id !== productId));

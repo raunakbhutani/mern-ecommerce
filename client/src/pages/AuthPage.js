@@ -3,7 +3,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = 'http://localhost:5000/api/auth';
+const API_URL = 'https://mern-ecommerce-1oz8.onrender.com/api/auth';
 
 export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);

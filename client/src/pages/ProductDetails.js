@@ -13,7 +13,7 @@ export default function ProductDetails() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/products`)
+    axios.get('https://mern-ecommerce-1oz8.onrender.com/api/products')
       .then(res => {
         const found = res.data.find(p => p._id === id);
         setProduct(found || null);
@@ -25,7 +25,7 @@ export default function ProductDetails() {
   const handleAddToCart = async () => {
     if (!user) return navigate('/login');
     try {
-      await axios.post('http://localhost:5000/api/cart/add', {
+      await axios.post('https://mern-ecommerce-1oz8.onrender.com/api/cart/add', {
         productId: id,
         quantity: Number(quantity)
       }, {

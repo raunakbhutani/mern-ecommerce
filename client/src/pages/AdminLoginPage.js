@@ -3,7 +3,7 @@ import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const API_URL = 'http://localhost:5000/api/auth/admin-login';
+const API_URL = 'https://mern-ecommerce-1oz8.onrender.com/api/auth/admin-login';
 
 export default function AdminLoginPage() {
   const [form, setForm] = useState({ email: '', password: '' });
