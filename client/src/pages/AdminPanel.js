@@ -44,7 +44,7 @@ export default function AdminPanel() {
 
   const handleDelete = async id => {
     try {
-      await axios.delete(`https://mern-ecommerce-1oz8.onrender.com/api/products${id}`, {
+      await axios.delete(`https://mern-ecommerce-1oz8.onrender.com/api/products/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProducts(products.filter(p => p._id !== id));
