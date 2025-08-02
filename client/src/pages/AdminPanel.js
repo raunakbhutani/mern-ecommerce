@@ -28,7 +28,7 @@ export default function AdminPanel() {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/products', {
+      const res = await axios.post('https://mern-ecommerce-1oz8.onrender.com/api/products', {
         ...form,
         price: Number(form.price),
         countInStock: Number(form.countInStock)
@@ -44,7 +44,7 @@ export default function AdminPanel() {
 
   const handleDelete = async id => {
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`https://mern-ecommerce-1oz8.onrender.com/api/products${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProducts(products.filter(p => p._id !== id));
